@@ -16,16 +16,20 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		var_dump($events);
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+
 			// Get text sent
-			// $text = $event['source']['userId'];
+			
 			if ($event['message']['text'] == "สวัสดี"){
 				$text = "สวสัดีครับ";
 			}else if ($event['message']['text'] == "สมัคร"){
-				$text = "สมัครเรียบร้อย";
+				$text = $event['source']['userId']." สมัครเรียบร้อยแล้วค่ะ";
+			}else if ($event['message']['text'] == "key"){
+				$text = "Key ของคุณคือ ".$event['source']['userId'];
 			}else{
-				$text = $event['source']['userId'];
+				$text = "เร็วๆนี้";
 			}
-			
+
+
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
