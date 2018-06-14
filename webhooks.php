@@ -18,9 +18,9 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			// $text = $event['source']['userId'];
-			if ($event['message']['test'] == "สวัสดี"){
+			if ($event['message']['text'] == "สวัสดี"){
 				$text = "สวสัดีครับ";
-			}else if ($event['message']['test'] == "สมัคร"){
+			}else if ($event['message']['text'] == "สมัคร"){
 				$text = "สมัครเรียบร้อย";
 			}else{
 				$text = $event['source']['userId'];
