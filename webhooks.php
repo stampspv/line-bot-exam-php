@@ -18,7 +18,14 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			// $text = $event['source']['userId'];
-			$text = $events;
+			if ($event['message']['test'] == "สวัสดี"){
+				$text = "สวสัดีครับ";
+			}else if ($event['message']['test'] == "สมัคร"){
+				$text = "สมัครเรียบร้อย";
+			}else{
+				$text = $event['source']['userId'];
+			}
+			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
