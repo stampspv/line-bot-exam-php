@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			
 			if ($event['message']['text'] == "สวัสดี"){
-				$text = "สวสัดีครับ";
+				$text = "สวัสดีครับ";
 			}else if ($event['message']['text'] == "สมัคร"){
 				$text = $event['source']['userId']." สมัครเรียบร้อยแล้วค่ะ";
 			}else if ($event['message']['text'] == "key"){
