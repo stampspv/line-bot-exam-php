@@ -25,6 +25,8 @@ if (!is_null($events['events'])) {
 				$text = $event['source']['userId']." สมัครเรียบร้อยแล้วค่ะ";
 			}else if ($event['message']['text'] == "key"){
 				$text = "Key ของคุณคือ ".$event['source']['userId'];
+			}else if ($event['message']['text'] == "คะแนนของฉัน"){
+				$text = "คะแนนของคุณคือ 200 แต้ม";
 			}else{
 				$text = "เร็วๆนี้";
 			}
